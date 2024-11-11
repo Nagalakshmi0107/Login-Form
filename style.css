@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgb(196, 188, 188); */
+
+}
+body,html{
+    height: 100%;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    background-color: #2c2f48;
+}
+ .snow-container{
+    position: fixed;
+    /* border: 2px solid white; */
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+} 
+.snow{
+    position: absolute;
+    top: -10px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+ @keyframes fall{
+    0%{transform:translateY(-100px);}
+    100%{transform: translateY(100vh);}
+
+ }
+ .login-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+    z-index: 1;
+    padding: 20px;
+ }
+ .image-container{
+    display: flex;
+    align-items: center;
+ }
+ .image-container img{
+    width: 250px;
+    height: 410px;
+    border-radius: 10px;
+ }
+ .form-container{
+    background-color: #fff;
+    padding: 30px ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 100%;
+ }
+ .auth-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+ }
+ .google{
+    background-color: #4285f4;  color:#fff;
+ }
+ .apple{
+    background-color: #333; color:#fff ;
+ }
+ .divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    color: #888;
+ }
+ .divider span{
+    font-size: 0.9rem;
+ }
+ form{
+    display: flex;
+    flex-direction: column;
+ }
+ form input{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+ }
+ form button{
+    padding: 10px;
+    background-color: #4285f4;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+ }
+ .links{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 10px;
+ }
+ .links a{
+    color: #4285f4;
+    text-decoration: none;
+ }
+ /* responsive styling */
+ @media(max-width:786px){
+    .login-wrapper{
+        flex-direction: column;
+    }
+    .image-container img{
+        display: none;
+
+    }
+    .form-container{
+        width: 90%;
+        max-width: 400px;
+    }
+ }
